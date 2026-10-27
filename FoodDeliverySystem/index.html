@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CraveCart - Discover delicious food, explore restaurants and order your favourites online.">
+  <title>CraveCart | Food Delivery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar container">
+      <a href="#home" class="logo"><span class="logo-icon">✦</span> crave<span>cart</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#restaurants">Restaurants</a>
+        <a href="#menu">Explore Menu</a>
+        <a href="#about">About</a>
+      </div>
+
+      <button class="cart-button" id="cartButton" aria-label="Open shopping cart">
+        <span>🛒</span> My Cart <b id="cartCount">0</b>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> GOOD FOOD, GOOD MOOD</span>
+          <h1>Your cravings.<br>Our <span>delivery.</span></h1>
+          <p>From local favourites to delicious discoveries, get the food you love delivered right to your door.</p>
+          <div class="hero-actions">
+            <a href="#menu" class="btn btn-primary">Explore Food <span>→</span></a>
+            <a href="#restaurants" class="btn btn-light">Find Restaurants</a>
+          </div>
+          <div class="hero-trust">
+            <div class="trust-avatars"><span>🍕</span><span>🍔</span><span>🍜</span></div>
+            <p><strong>Freshly made</strong><br><small>Made with love, delivered with care</small></p>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-wrap">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=85" alt="Freshly baked pizza topped with vegetables">
+          </div>
+          <div class="floating-card delivery-card"><span class="float-icon">🛵</span><div><strong>Quick delivery</strong><small>Fresh at your doorstep</small></div></div>
+          <div class="floating-card rating-card"><span>⭐</span><div><strong>Top rated</strong><small>Customer favourites</small></div></div>
+          <span class="decor decor-one">✳</span>
+          <span class="decor decor-two">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container benefit-grid">
+        <div class="benefit"><span>🥗</span><div><strong>Fresh ingredients</strong><small>Quality in every bite</small></div></div>
+        <div class="benefit"><span>⚡</span><div><strong>Fast delivery</strong><small>Food without the wait</small></div></div>
+        <div class="benefit"><span>💛</span><div><strong>Made with care</strong><small>Love at first bite</small></div></div>
+      </div>
+    </section>
+
+    <section class="section container" id="restaurants">
+      <div class="section-heading">
+        <div><p class="eyebrow">YOUR NEXT FAVOURITE</p><h2>Popular restaurants</h2><p class="section-subtitle">Great food from places you'll love.</p></div>
+        <a href="#menu" class="text-link">Explore all food →</a>
+      </div>
+      <div class="restaurant-grid" id="restaurantGrid"></div>
+    </section>
+
+    <section class="section menu-section" id="menu">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow">MADE FOR YOUR CRAVINGS</p><h2>Explore our menu<span class="heading-dot">.</span></h2><p class="section-subtitle">Find something delicious for every mood.</p></div>
+        </div>
+
+        <div class="menu-controls">
+          <label class="search-box"><span>⌕</span><input type="search" id="searchInput" placeholder="Search food or restaurant..." aria-label="Search food or restaurant"></label>
+          <select id="categoryFilter" aria-label="Filter by category">
+            <option value="All">All categories</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Burgers">Burgers</option>
+            <option value="Indian">Indian</option>
+            <option value="Healthy">Healthy</option>
+            <option value="Desserts">Desserts</option>
+            <option value="Beverages">Beverages</option>
+          </select>
+          <select id="priceFilter" aria-label="Filter by price">
+            <option value="all">All prices</option>
+            <option value="under150">Under ₹150</option>
+            <option value="150to300">₹150 – ₹300</option>
+            <option value="over300">Above ₹300</option>
+          </select>
+          <select id="sortFilter" aria-label="Sort food">
+            <option value="popular">Most popular</option>
+            <option value="rating">Top rated</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </div>
+
+        <div class="category-chips" id="categoryChips">
+          <button class="chip active" data-category="All">🍽️ All food</button>
+          <button class="chip" data-category="Pizza">🍕 Pizza</button>
+          <button class="chip" data-category="Burgers">🍔 Burgers</button>
+          <button class="chip" data-category="Indian">🍛 Indian</button>
+          <button class="chip" data-category="Healthy">🥗 Healthy</button>
+          <button class="chip" data-category="Desserts">🍰 Desserts</button>
+          <button class="chip" data-category="Beverages">🥤 Beverages</button>
+        </div>
+
+        <div class="food-grid" id="foodGrid"></div>
+        <p class="empty-state hidden" id="emptyState">😕 No matching dishes found. Try another search or category.</p>
+      </div>
+    </section>
+
+    <section class="offer-section container" id="about">
+      <div class="offer-content"><p class="eyebrow">A LITTLE EXTRA HAPPINESS</p><h2>Good food tastes<br>better when shared.</h2><p>Explore a world of flavours, find your favourites and make every meal special.</p><a href="#menu" class="btn btn-primary">Find your favourite →</a></div>
+      <div class="offer-emoji" aria-hidden="true">🍕</div>
+    </section>
+
+    <section class="section container cart-section" id="cartSection">
+      <div class="section-heading"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your shopping cart</h2><p class="section-subtitle">Review your delicious picks before checkout.</p></div></div>
+      <div class="cart-layout">
+        <div class="cart-items" id="cartItems"></div>
+        <aside class="cart-summary">
+          <h3>Order summary</h3>
+          <div class="summary-row"><span>Subtotal</span><strong id="subtotal">₹0</strong></div>
+          <div class="summary-row"><span>Delivery fee</span><strong id="deliveryFee">₹0</strong></div>
+          <div class="summary-row"><span>Taxes (5%)</span><strong id="taxAmount">₹0</strong></div>
+          <div class="summary-row total-row"><span>Total</span><strong id="totalAmount">₹0</strong></div>
+          <button class="btn btn-primary btn-full" id="checkoutButton">Proceed to checkout →</button>
+          <button class="clear-cart" id="clearCartButton">Clear cart</button>
+          <p class="summary-note">🔒 Demo checkout · No payment is collected</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section checkout-section" id="checkoutSection">
+      <div class="container checkout-container">
+        <div class="section-heading"><div><p class="eyebrow">ALMOST THERE</p><h2>Delivery details</h2><p class="section-subtitle">Tell us where to bring your food.</p></div></div>
+        <form id="checkoutForm" class="checkout-form">
+          <div class="form-grid">
+            <label>Full name<input type="text" name="customerName" placeholder="Enter your name" minlength="2" maxlength="70" required></label>
+            <label>Phone number<input type="tel" name="phone" placeholder="10-digit mobile number" pattern="[6-9][0-9]{9}" title="Enter a valid 10-digit Indian mobile number" required></label>
+            <label class="full-field">Email address<input type="email" name="email" placeholder="you@example.com" required></label>
+            <label class="full-field">Delivery address<textarea name="address" rows="3" placeholder="House no., street, area, city..." minlength="10" maxlength="300" required></textarea></label>
+            <label class="full-field">Delivery instructions (optional)<input type="text" name="instructions" placeholder="Landmark, gate code, etc." maxlength="200"></label>
+          </div>
+          <div class="checkout-preview" id="checkoutPreview">Your order total: ₹0</div>
+          <button type="submit" class="btn btn-primary btn-full">Place my order ✓</button>
+          <p class="form-note">This is a demonstration project. No real order or payment will be processed.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section container hidden" id="orderSection">
+      <div class="order-success">
+        <div class="success-icon">✓</div>
+        <p class="eyebrow">ORDER CONFIRMED</p>
+        <h2>You're in for a treat!</h2>
+        <p id="orderMessage">Your demo order has been saved successfully.</p>
+        <div id="orderDetails" class="order-details"></div>
+        <button class="btn btn-primary" id="continueShopping">Continue exploring →</button>
+      </div>
+    </section>
+
+    <section class="section container" id="orderHistorySection">
+      <div class="section-heading"><div><p class="eyebrow">YOUR PAST ORDERS</p><h2>Order history</h2><p class="section-subtitle">Your recent demo orders are saved on this device.</p></div></div>
+      <div id="orderHistory" class="history-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <div><a href="#home" class="logo footer-logo"><span class="logo-icon">✦</span> crave<span>cart</span></a><p>Bringing your favourite flavours a little closer.</p></div>
+      <div class="footer-links"><a href="#home">Home</a><a href="#restaurants">Restaurants</a><a href="#menu">Menu</a><a href="#cartSection">My Cart</a></div>
+      <div class="footer-social"><strong>Made for food lovers</strong><p>Fresh food. Happy moments. ❤️</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> CraveCart</span><span>Student web development project</span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
