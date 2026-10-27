@@ -1,0 +1,640 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SkillBridge connects talented freelancers with exciting projects. Discover opportunities, showcase your skills, and grow your career.">
+    <title>SkillBridge | Find Work. Build Your Future.</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header" id="home">
+        <nav class="navbar container">
+            <a href="#home" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+                Skill<span>Bridge</span>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle"
+                    aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#projects" class="nav-link">Find Projects</a>
+                <a href="#freelancers" class="nav-link">Freelancers</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+
+                <div class="nav-actions">
+                    <button class="btn btn-outline" id="postProjectBtn">
+                        <i class="fa-solid fa-plus"></i> Post a Project
+                    </button>
+                    <a href="#projects" class="btn btn-primary">Find Work <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-shape shape-one"></div>
+            <div class="hero-shape shape-two"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow">
+                        <i class="fa-solid fa-sparkles"></i>
+                        YOUR NEXT OPPORTUNITY STARTS HERE
+                    </span>
+
+                    <h1>
+                        Great work starts with
+                        <span>the right connection.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover exciting projects, connect with talented
+                        professionals, and turn your skills into opportunities.
+                    </p>
+
+                    <form class="hero-search" id="heroSearchForm">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="heroSearch"
+                               placeholder="Search projects, skills..."
+                               aria-label="Search projects">
+                        <button type="submit" class="btn btn-primary">Explore Jobs</button>
+                    </form>
+
+                    <div class="popular-searches">
+                        <span>Popular:</span>
+                        <button type="button" class="search-tag" data-search="Web Development">Web Development</button>
+                        <button type="button" class="search-tag" data-search="UI/UX Design">UI/UX Design</button>
+                        <button type="button" class="search-tag" data-search="Content Writing">Content Writing</button>
+                    </div>
+
+                    <div class="hero-trust">
+                        <div class="avatar-stack">
+                            <img src="https://i.pravatar.cc/80?img=12" alt="Freelancer">
+                            <img src="https://i.pravatar.cc/80?img=47" alt="Freelancer">
+                            <img src="https://i.pravatar.cc/80?img=33" alt="Freelancer">
+                            <span class="avatar-more">+</span>
+                        </div>
+                        <div>
+                            <strong>Made for ambitious people</strong>
+                            <p>Find work that fits your talent.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-image-wrap">
+                        <img
+                            src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+                            alt="Professionals collaborating on a project"
+                            class="hero-image">
+
+                        <div class="floating-card floating-card-top">
+                            <span class="floating-icon green"><i class="fa-solid fa-circle-check"></i></span>
+                            <div>
+                                <strong>Project matched!</strong>
+                                <p>Your skills are in demand</p>
+                            </div>
+                        </div>
+
+                        <div class="floating-card floating-card-bottom">
+                            <span class="floating-icon purple"><i class="fa-solid fa-wallet"></i></span>
+                            <div>
+                                <strong>Work on your terms</strong>
+                                <p>Discover new opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-decoration decoration-one"></div>
+                    <div class="hero-decoration decoration-two"></div>
+                </div>
+            </div>
+
+            <div class="container hero-stats">
+                <div class="stat-item">
+                    <strong>Explore</strong>
+                    <span>Projects across industries</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Showcase</strong>
+                    <span>Your skills and portfolio</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Connect</strong>
+                    <span>With potential clients</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Grow</strong>
+                    <span>Your freelance career</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section categories-section" id="categories">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">EXPLORE YOUR POTENTIAL</span>
+                        <h2>Find work in your <span>field</span></h2>
+                        <p>Choose a category that matches your expertise.</p>
+                    </div>
+                    <a href="#projects" class="text-link">
+                        Explore all projects <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="categories-grid">
+                    <button class="category-card" data-category="Web Development">
+                        <span class="category-icon icon-blue"><i class="fa-solid fa-code"></i></span>
+                        <strong>Web Development</strong>
+                        <span>Websites & applications</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square category-arrow"></i>
+                    </button>
+
+                    <button class="category-card" data-category="UI/UX Design">
+                        <span class="category-icon icon-pink"><i class="fa-solid fa-pen-ruler"></i></span>
+                        <strong>UI/UX Design</strong>
+                        <span>Beautiful user experiences</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square category-arrow"></i>
+                    </button>
+
+                    <button class="category-card" data-category="Content Writing">
+                        <span class="category-icon icon-yellow"><i class="fa-solid fa-pen-nib"></i></span>
+                        <strong>Content Writing</strong>
+                        <span>Words that make an impact</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square category-arrow"></i>
+                    </button>
+
+                    <button class="category-card" data-category="Digital Marketing">
+                        <span class="category-icon icon-green"><i class="fa-solid fa-chart-line"></i></span>
+                        <strong>Digital Marketing</strong>
+                        <span>Reach the right audience</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square category-arrow"></i>
+                    </button>
+
+                    <button class="category-card" data-category="Graphic Design">
+                        <span class="category-icon icon-purple"><i class="fa-solid fa-palette"></i></span>
+                        <strong>Graphic Design</strong>
+                        <span>Creative visual solutions</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square category-arrow"></i>
+                    </button>
+
+                    <button class="category-card" data-category="Mobile Development">
+                        <span class="category-icon icon-orange"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                        <strong>Mobile Development</strong>
+                        <span>Apps for every device</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square category-arrow"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">OPPORTUNITIES AWAIT</span>
+                        <h2>Projects worth <span>exploring.</span></h2>
+                        <p>Find opportunities that fit your skills, interests, and budget.</p>
+                    </div>
+                    <button class="btn btn-outline" id="resetFilters">
+                        <i class="fa-solid fa-rotate-left"></i> Reset Filters
+                    </button>
+                </div>
+
+                <!-- Search and Filters -->
+                <div class="filter-panel">
+                    <div class="filter-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" id="projectSearch"
+                               placeholder="Search project titles or skills..."
+                               aria-label="Search projects by title or skills">
+                    </div>
+
+                    <select id="categoryFilter" aria-label="Filter by category">
+                        <option value="">All Categories</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Content Writing">Content Writing</option>
+                        <option value="Digital Marketing">Digital Marketing</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="Mobile Development">Mobile Development</option>
+                    </select>
+
+                    <select id="budgetFilter" aria-label="Filter by budget">
+                        <option value="">Any Budget</option>
+                        <option value="under10000">Under ₹10,000</option>
+                        <option value="10000to30000">₹10,000–₹30,000</option>
+                        <option value="over30000">Above ₹30,000</option>
+                    </select>
+
+                    <select id="sortFilter" aria-label="Sort projects">
+                        <option value="newest">Newest First</option>
+                        <option value="budgetHigh">Budget: High to Low</option>
+                        <option value="budgetLow">Budget: Low to High</option>
+                    </select>
+                </div>
+
+                <div class="results-info">
+                    <p><strong id="projectCount">0</strong> opportunities to explore</p>
+                    <span><i class="fa-solid fa-shield-halved"></i> Demo project listings</span>
+                </div>
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Project cards are generated by script.js -->
+                </div>
+
+                <div class="empty-state hidden" id="projectEmptyState">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <h3>No projects found</h3>
+                    <p>Try another search term or change your filters.</p>
+                    <button class="btn btn-primary" id="emptyResetBtn">Clear Filters</button>
+                </div>
+
+                <div class="center-action">
+                    <button class="btn btn-outline btn-large" id="loadMoreBtn">
+                        Explore More Projects <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Freelancers -->
+        <section class="section freelancers-section" id="freelancers">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">MEET THE TALENT</span>
+                        <h2>People who make <span>things happen.</span></h2>
+                        <p>Explore sample freelancer profiles and their areas of expertise.</p>
+                    </div>
+                </div>
+
+                <div class="freelancer-search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" id="freelancerSearch"
+                           placeholder="Search freelancers by name or skill..."
+                           aria-label="Search freelancers">
+                    <select id="experienceFilter" aria-label="Filter by experience">
+                        <option value="">All Experience Levels</option>
+                        <option value="Entry Level">Entry Level</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Expert">Expert</option>
+                    </select>
+                </div>
+
+                <div class="freelancers-grid" id="freelancersGrid">
+                    <!-- Freelancer cards are generated by script.js -->
+                </div>
+
+                <div class="empty-state hidden" id="freelancerEmptyState">
+                    <i class="fa-solid fa-user-slash"></i>
+                    <h3>No freelancers found</h3>
+                    <p>Try searching for another name or skill.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How it works -->
+        <section class="section how-section" id="how-it-works">
+            <div class="container">
+                <div class="section-heading centered-heading">
+                    <span class="eyebrow">SIMPLE BY DESIGN</span>
+                    <h2>Your next opportunity is <span>three steps away.</span></h2>
+                    <p>Start exploring the freelance marketplace experience.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <span class="step-number">01</span>
+                        <div class="step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                        <h3>Discover Projects</h3>
+                        <p>Search opportunities that match your skills and professional goals.</p>
+                    </article>
+
+                    <article class="step-card">
+                        <span class="step-number">02</span>
+                        <div class="step-icon"><i class="fa-solid fa-file-pen"></i></div>
+                        <h3>Submit Proposals</h3>
+                        <p>Introduce yourself, explain your approach, and suggest your budget.</p>
+                    </article>
+
+                    <article class="step-card">
+                        <span class="step-number">03</span>
+                        <div class="step-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Track Progress</h3>
+                        <p>Use your dashboard to review your submitted proposals and project activity.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard -->
+        <section class="section dashboard-section" id="dashboard">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <span class="eyebrow">YOUR WORKSPACE</span>
+                        <h2>Your freelance <span>dashboard.</span></h2>
+                        <p>Keep track of your activity in this browser-based demo.</p>
+                    </div>
+                    <span class="demo-badge"><i class="fa-solid fa-circle"></i> Demo Dashboard</span>
+                </div>
+
+                <div class="dashboard-stats">
+                    <article class="dashboard-stat">
+                        <span class="dashboard-stat-icon icon-blue"><i class="fa-solid fa-briefcase"></i></span>
+                        <div>
+                            <p>Posted Projects</p>
+                            <strong id="postedProjectsCount">0</strong>
+                        </div>
+                    </article>
+
+                    <article class="dashboard-stat">
+                        <span class="dashboard-stat-icon icon-purple"><i class="fa-solid fa-paper-plane"></i></span>
+                        <div>
+                            <p>Submitted Proposals</p>
+                            <strong id="submittedProposalsCount">0</strong>
+                        </div>
+                    </article>
+
+                    <article class="dashboard-stat">
+                        <span class="dashboard-stat-icon icon-green"><i class="fa-solid fa-circle-check"></i></span>
+                        <div>
+                            <p>Open Opportunities</p>
+                            <strong id="openProjectsCount">0</strong>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="dashboard-panel">
+                    <div class="dashboard-tabs" role="tablist" aria-label="Dashboard sections">
+                        <button class="dashboard-tab active" id="proposalsTab"
+                                data-dashboard-tab="proposals" role="tab"
+                                aria-selected="true">My Proposals</button>
+                        <button class="dashboard-tab" id="postedTab"
+                                data-dashboard-tab="posted" role="tab"
+                                aria-selected="false">My Posted Projects</button>
+                    </div>
+
+                    <div class="dashboard-content" id="dashboardContent">
+                        <!-- Dashboard content is generated by script.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to action -->
+        <section class="cta-section">
+            <div class="container cta-content">
+                <div>
+                    <span class="eyebrow light-eyebrow">YOUR NEXT CHAPTER STARTS NOW</span>
+                    <h2>Ready to turn your skills into opportunities?</h2>
+                    <p>Explore projects, share your expertise, and take the next step in your freelance journey.</p>
+                </div>
+                <a href="#projects" class="btn btn-light btn-large">
+                    Explore Opportunities <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo footer-logo">
+                        <span class="logo-icon"><i class="fa-solid fa-bolt"></i></span>
+                        Skill<span>Bridge</span>
+                    </a>
+                    <p>A student-built freelancing marketplace demo designed to explore projects, showcase talent, and practice proposal management.</p>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <a href="#projects">Find Projects</a>
+                    <a href="#freelancers">Freelancers</a>
+                    <a href="#categories">Categories</a>
+                    <a href="#how-it-works">How It Works</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Your Workspace</h3>
+                    <a href="#dashboard">Dashboard</a>
+                    <button type="button" id="footerPostProjectBtn">Post a Project</button>
+                    <a href="#home">Back to Home</a>
+                </div>
+
+                <div class="footer-column">
+                    <h3>About This Demo</h3>
+                    <p>Built with HTML, CSS, JavaScript, and browser LocalStorage.</p>
+                    <p class="footer-note">No real accounts, payments, or client connections are provided.</p>
+                </div>
+            </div>
+
+            <div class="container footer-bottom">
+                <p>&copy; <span id="currentYear"></span> SkillBridge. Educational project demo.</p>
+                <a href="#home">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Proposal Modal -->
+    <div class="modal-overlay hidden" id="proposalModal"
+         role="dialog" aria-modal="true" aria-labelledby="proposalModalTitle">
+        <div class="modal">
+            <div class="modal-header">
+                <div>
+                    <span class="eyebrow">MAKE YOUR INTRODUCTION</span>
+                    <h2 id="proposalModalTitle">Submit a Proposal</h2>
+                </div>
+                <button class="modal-close" type="button" data-close-modal
+                        aria-label="Close proposal form">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="selected-project-box" id="selectedProjectInfo">
+                Select a project to view its details.
+            </div>
+
+            <form id="proposalForm">
+                <input type="hidden" id="proposalProjectId" name="projectId">
+
+                <div class="form-group">
+                    <label for="freelancerName">Your Full Name *</label>
+                    <input type="text" id="freelancerName" name="freelancerName"
+                           placeholder="Enter your full name" minlength="2" maxlength="80" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="proposalEmail">Email Address *</label>
+                        <input type="email" id="proposalEmail" name="email"
+                               placeholder="you@example.com" maxlength="120" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proposalBudget">Expected Budget (₹) *</label>
+                        <input type="number" id="proposalBudget" name="budget"
+                               placeholder="e.g. 12000" min="1" max="10000000" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="proposalCoverLetter">Your Proposal *</label>
+                    <textarea id="proposalCoverLetter" name="coverLetter"
+                              placeholder="Introduce yourself and explain how you would approach this project..."
+                              minlength="20" maxlength="2000" rows="5" required></textarea>
+                    <small>Write at least 20 characters.</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">
+                    Submit Proposal <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Post Project Modal -->
+    <div class="modal-overlay hidden" id="postProjectModal"
+         role="dialog" aria-modal="true" aria-labelledby="postProjectModalTitle">
+        <div class="modal">
+            <div class="modal-header">
+                <div>
+                    <span class="eyebrow">SHARE AN OPPORTUNITY</span>
+                    <h2 id="postProjectModalTitle">Post a Project</h2>
+                </div>
+                <button class="modal-close" type="button" data-close-modal
+                        aria-label="Close project form">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <form id="postProjectForm">
+                <div class="form-group">
+                    <label for="newProjectTitle">Project Title *</label>
+                    <input type="text" id="newProjectTitle" name="title"
+                           placeholder="e.g. Build a business website" minlength="5"
+                           maxlength="120" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="newProjectDescription">Project Description *</label>
+                    <textarea id="newProjectDescription" name="description"
+                              placeholder="Describe the work, goals, and deliverables..."
+                              minlength="20" maxlength="2000" rows="4" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="newProjectCategory">Category *</label>
+                        <select id="newProjectCategory" name="category" required>
+                            <option value="">Choose category</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="UI/UX Design">UI/UX Design</option>
+                            <option value="Content Writing">Content Writing</option>
+                            <option value="Digital Marketing">Digital Marketing</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Mobile Development">Mobile Development</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newProjectBudget">Budget (₹) *</label>
+                        <input type="number" id="newProjectBudget" name="budget"
+                               placeholder="e.g. 15000" min="1" max="10000000" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="newProjectDeadline">Deadline *</label>
+                        <input type="date" id="newProjectDeadline" name="deadline" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newProjectClient">Client / Company *</label>
+                        <input type="text" id="newProjectClient" name="client"
+                               placeholder="Your name or company" minlength="2"
+                               maxlength="100" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="newProjectSkills">Required Skills *</label>
+                    <input type="text" id="newProjectSkills" name="skills"
+                           placeholder="HTML, CSS, JavaScript" minlength="2"
+                           maxlength="250" required>
+                    <small>Separate skills with commas.</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">
+                    Publish Demo Project <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Freelancer Details Modal -->
+    <div class="modal-overlay hidden" id="freelancerModal"
+         role="dialog" aria-modal="true" aria-labelledby="freelancerModalTitle">
+        <div class="modal">
+            <div class="modal-header">
+                <div>
+                    <span class="eyebrow">FREELANCER PROFILE</span>
+                    <h2 id="freelancerModalTitle">Profile Details</h2>
+                </div>
+                <button class="modal-close" type="button" data-close-modal
+                        aria-label="Close freelancer details">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div id="freelancerDetails"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toastMessage">Action completed.</span>
+    </div>
+
+    <button class="back-to-top" id="backToTop"
+            type="button" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
